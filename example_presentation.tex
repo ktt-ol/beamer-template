@@ -1,0 +1,72 @@
+% --- Page Layout
+\documentclass[11pt,ignorenonframetext,slidestop,aspectratio=1610,fleqn]{beamer}
+\include{head}
+\include{layout}
+
+% --- Variables
+\title[short title]{long title}
+\author[short author]{long author}
+\date{\today}
+% --- Variables
+
+% --- Start
+\begin{document}
+
+% ------------------------------------------------------------------------------ Title page
+\frame[plain]{
+	\begin{beamercolorbox}[wd=1.01\paperwidth,ht=1.01\paperheight]{}
+		\begin{picture}(0,0) {
+			\put(-6,4){\includegraphics[width=1.02\paperwidth]{titleslide}}
+			\put(14.5,230){\includegraphics[width=0.4\linewidth]{MainframeLogo}}
+			\put(173,125){\insertauthor}
+			\put(173,112){\inserttitle}
+		}
+		\end{picture}
+	\end{beamercolorbox}
+}
+
+\section{Introduction}
+
+\frame {
+	\frametitle{Introduction}
+	
+	...
+}
+
+% ------------------------------------------------------------------------------ Table of Contents
+\frame{\frametitle{{\hspace*{-0.05cm}Outline}}
+  \tableofcontents
+}
+%%---------------------------------------------------------------------------
+
+\section{Content}
+
+\frame {
+	\frametitle{Content}
+	
+	...
+}
+
+\section{End}
+
+\frame {
+	\frametitle{The End}
+
+	\vskip 75px
+
+	\begin{center}
+		\begin{Huge}
+			Questions?
+		\end{Huge}
+	\end{center}
+}
+
+\frame {
+	\frametitle{Sources}
+
+	\begin{itemize}
+		\item \url{http://www.google.de}
+	\end{itemize}
+}
+
+\end{document}

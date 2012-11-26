@@ -1,0 +1,60 @@
+% Desired Packages
+\usepackage{graphicx}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{lastpage}
+\usepackage{pdfsync}
+\usepackage{listings}
+\usepackage{caption}
+\captionsetup{labelfont=bf}
+\usepackage{rotating}
+\usepackage{xy}
+\usepackage{ulem}
+
+% --- Code Syntax Highlighting
+\definecolor{CodeGreen}{rgb}{0.0,0.46,0.05}
+\definecolor{CodeBlue}{rgb}{0.16,0.0,1.0}
+\definecolor{CodePurple}{rgb}{0.49,0.0,0.33}
+\definecolor{CodeRed}{rgb}{0.57,0.0,0.0}
+\lstset{
+	language=C,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{CodePurple},
+	commentstyle=\color{CodeGreen},
+	stringstyle=\color{CodeRed},
+	moredelim=[is][\color{CodeBlue}]{[*}{*]},	% ...extra color
+	columns=fixed,
+	basewidth={0.5em, 0.45em},
+	showstringspaces=false,
+	tabsize=2
+}
+
+% Further Configurations
+\renewcommand\rmdefault{pmy}            		% Activate Myriad Font
+\definecolor{Gray}{rgb}{0.5, 0.5, 0.5}  		% Define light color
+\definecolor{HighlightRed}{rgb}{0.6, 0.0, 0.0}  % Define light highlighting color
+\graphicspath{{images/}}
+\usetheme{Mainframe}                     		% The main thing: our theme
+
+% Commando for code extracts
+\newtheorem{codeTheorem}{Code}
+\newcommand{\code}[2]
+{
+\vspace{0.2cm}
+\begin{codeTheorem}\label{#2}
+{\emph{#1}}
+\end{codeTheorem}
+}
+
+% Better UTF-8 support (umlauts in PDF title)
+\PrerenderUnicode{Ä}
+\PrerenderUnicode{Ü}
+\PrerenderUnicode{Ö}
+\PrerenderUnicode{ä}
+\PrerenderUnicode{ü}
+\PrerenderUnicode{ö}
+\PrerenderUnicode{ß}
